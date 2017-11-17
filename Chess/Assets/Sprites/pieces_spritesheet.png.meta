@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: 3f0d5f4769a96e445977fc86d6aa3af9
+timeCreated: 1510950705
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bBishop
+    21300002: wBishop
+    21300004: bKing
+    21300006: wKing
+    21300008: bKnight
+    21300010: wKnight
+    21300012: bPawn
+    21300014: wPawn
+    21300016: bQueen
+    21300018: wQueen
+    21300020: bRook
+    21300022: wRook
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bBishop
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 745
+        width: 149
+        height: 355
+      alignment: 9
+      pivot: {x: 0.4494596, y: 0.28622547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: wBishop
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 745
+        width: 149
+        height: 355
+      alignment: 9
+      pivot: {x: 0.46585667, y: 0.2807098}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bKing
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 661
+        width: 225
+        height: 439
+      alignment: 9
+      pivot: {x: 0.5782422, y: 0.2834446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: wKing
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 661
+        width: 225
+        height: 439
+      alignment: 9
+      pivot: {x: 0.57519203, y: 0.2861128}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bKnight
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 367
+        width: 318
+        height: 294
+      alignment: 9
+      pivot: {x: 0.5872859, y: 0.3539163}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: wKnight
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 367
+        width: 318
+        height: 294
+      alignment: 9
+      pivot: {x: 0.5971268, y: 0.35556674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bPawn
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 373
+        width: 223
+        height: 288
+      alignment: 9
+      pivot: {x: 0.41182446, y: 0.35810906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: wPawn
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 223
+        height: 288
+      alignment: 9
+      pivot: {x: 0.42447284, y: 0.32339013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bQueen
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 27
+        width: 157
+        height: 340
+      alignment: 9
+      pivot: {x: 0.5921522, y: 0.32308555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: wQueen
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 27
+        width: 157
+        height: 340
+      alignment: 9
+      pivot: {x: 0.5921526, y: 0.31014085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bRook
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 47
+        width: 207
+        height: 320
+      alignment: 9
+      pivot: {x: 0.60910195, y: 0.31045765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: wRook
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 47
+        width: 207
+        height: 320
+      alignment: 9
+      pivot: {x: 0.6001283, y: 0.28112063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
