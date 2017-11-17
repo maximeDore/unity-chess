@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pieces_spritesheet.png">
+	<!-- Created with Adobe Animate version 18.0.0.107 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="spritesheet0000" x="0" y="0" width="149" height="355" frameX="-84" frameY="-42" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0001" x="149" y="0" width="149" height="355" frameX="-84" frameY="-42" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0002" x="298" y="0" width="225" height="439" frameX="-46" frameY="0" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0003" x="523" y="0" width="225" height="439" frameX="-46" frameY="0" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0004" x="0" y="439" width="318" height="294" frameX="0" frameY="-73" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0005" x="318" y="439" width="318" height="294" frameX="0" frameY="-73" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0006" x="636" y="439" width="223" height="288" frameX="-47" frameY="-76" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0007" x="0" y="733" width="223" height="288" frameX="-47" frameY="-76" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0008" x="223" y="733" width="157" height="340" frameX="-80" frameY="-50" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0009" x="380" y="733" width="157" height="340" frameX="-80" frameY="-50" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0010" x="537" y="733" width="207" height="320" frameX="-55" frameY="-60" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="spritesheet0011" x="744" y="733" width="207" height="320" frameX="-55" frameY="-60" frameWidth="318" frameHeight="439"/>
+</TextureAtlas>
