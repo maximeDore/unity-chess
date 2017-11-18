@@ -24,12 +24,13 @@ public class GridGenerator : MonoBehaviour {
 		//Instantiation du tableau des tuiles
 		_tileInfo = new TileInfo[_nbRow,_nbCol];
 
-		float tileWidth = _board[0].bounds.size.x;
+		float tileWidth = (_board[0].bounds.size.x);
+		float tileHeight = tileWidth*0.85f;
 		int altTile = 0;
-		Vector2 gridSize = new Vector2(tileWidth*_nbCol,tileWidth*_nbRow);
+		Vector2 gridSize = new Vector2(tileWidth*_nbCol,tileHeight*_nbRow);
 		for(int r=0;r<_nbRow;r++){
 			for(int c=0;c<_nbCol;c++){
-				Vector2 pos = new Vector2(tileWidth/2 + c*tileWidth - gridSize.x/2,tileWidth/-2 - r*tileWidth + gridSize.y/2);
+				Vector2 pos = new Vector2(tileWidth*1.5f + c*tileWidth - gridSize.x/2,tileHeight*-1 - r*tileHeight + gridSize.y/2);
 				SpriteRenderer tileRenderer = Instantiate(_board[altTile], pos, Quaternion.identity, transform);
 				if(altTile==1){
 					altTile--;

@@ -9,26 +9,22 @@ public class ButtonManager : MonoBehaviour {
 	private Button[] _btnRefs;
 
 	public void SelectButton(int value) {
-		Debug.Log(value);
+		Debug.Log("Bouton #"+(value+1));
 		switch (value) {
 			case 0: 
-				Debug.Log("Btn0");
 				BoardManager._PieceIndex = 0;
 				break;
 			case 1:
-				Debug.Log("Btn1");
 				BoardManager._PieceIndex = 1;
 				break;
 			case 2: 
-				Debug.Log("Btn2");
 				BoardManager._PieceIndex = 2;
 				break;
 			case 3:
-				Debug.Log("Btn3");
 				BoardManager._PieceIndex = 3;
 				break;
 			default:
-				Debug.Log("Pas un bouton...");
+				Debug.Log("Erreur...");
 				break;
 		}
 	}

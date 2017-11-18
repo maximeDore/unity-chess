@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="piecesBlack_spritesheet.png">
+	<!-- Created with Adobe Animate version 18.0.0.107 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="black_spritesheet0000" x="0" y="0" width="149" height="355" frameX="-111" frameY="-80" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="black_spritesheet0001" x="149" y="0" width="225" height="439" frameX="-53" frameY="0" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="black_spritesheet0002" x="0" y="439" width="318" height="294" frameX="0" frameY="-145" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="black_spritesheet0003" x="0" y="733" width="223" height="288" frameX="-95" frameY="-151" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="black_spritesheet0004" x="223" y="733" width="157" height="340" frameX="-108" frameY="-99" frameWidth="318" frameHeight="439"/>
+	<SubTexture name="black_spritesheet0005" x="0" y="1073" width="207" height="320" frameX="-82" frameY="-119" frameWidth="318" frameHeight="439"/>
+</TextureAtlas>

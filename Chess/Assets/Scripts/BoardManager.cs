@@ -15,7 +15,7 @@ public class BoardManager : MonoBehaviour {
 
 	void Update() {
 		if (Input.GetMouseButtonDown(0)) {
-			Debug.Log("Clic gauche, raycasting");
+			// Debug.Log("Clic gauche, raycasting");
 			SelectTile();
 		}
 	}
@@ -25,10 +25,13 @@ public class BoardManager : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit, 100)) {
 			var obj = hit.collider;
-			Debug.Log("Hit object: " + obj.gameObject.name);
+			Tile script = obj.GetComponent<Tile>();
+			// Debug.Log("Hit object: " + obj.gameObject.name);
 			// obj.GetComponent<SpriteRenderer>().color = Color.red; //Test
-			if(_pieceIndex!=-1){
+			if(_pieceIndex!=-1 && script._PieceOnTile==false){
 				Instantiate(_piecesRef[_pieceIndex], obj.GetComponent<Transform>());
+				script._PieceOnTile = true;
+				_PieceIndex = -1;
 			}
 		}
 	}

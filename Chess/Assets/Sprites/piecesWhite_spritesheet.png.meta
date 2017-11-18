@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 36bec8c20d4648a4b997ad5f12a91aed
+timeCreated: 1510981567
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: white_bishop
+    21300002: white_king
+    21300004: white_knight
+    21300006: white_spearhandle
+    21300008: white_hand
+    21300010: white_spear
+    21300012: white_pawn
+    21300014: white_knife
+    21300016: white_bomb
+    21300018: white_shield
+    21300020: white_queen
+    21300022: white_rook
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: white_bishop
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1693
+        width: 168
+        height: 355
+      alignment: 9
+      pivot: {x: 0.5704732, y: 0.27988523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_king
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1609
+        width: 225
+        height: 439
+      alignment: 9
+      pivot: {x: 0.42633194, y: 0.20873189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_knight
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1315
+        width: 303
+        height: 294
+      alignment: 9
+      pivot: {x: 0.4577766, y: 0.28508317}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_spearhandle
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1590
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_hand
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1558
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_spear
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1264
+        width: 218
+        height: 51
+      alignment: 9
+      pivot: {x: 0.13069381, y: 0.4535726}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_pawn
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1027
+        width: 183
+        height: 288
+      alignment: 9
+      pivot: {x: 0.48762086, y: 0.32391018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_knife
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1262
+        width: 104
+        height: 53
+      alignment: 9
+      pivot: {x: 0.56920713, y: 0.42547724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_bomb
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 739
+        width: 182
+        height: 288
+      alignment: 9
+      pivot: {x: 0.48480615, y: 0.28280047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_shield
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 739
+        width: 246
+        height: 288
+      alignment: 9
+      pivot: {x: 0.5157184, y: 0.3074661}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_queen
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 157
+        height: 340
+      alignment: 9
+      pivot: {x: 0.57606405, y: 0.2743707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: white_rook
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 419
+        width: 207
+        height: 320
+      alignment: 9
+      pivot: {x: 0.4333634, y: 0.28411913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
