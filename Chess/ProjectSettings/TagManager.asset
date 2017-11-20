@@ -15,7 +15,7 @@ TagManager:
   - 
   - Tile
   - Button
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Pieces
     uniqueID: 64666763
+    locked: 0
+  - name: UI
+    uniqueID: 3129670989
     locked: 0

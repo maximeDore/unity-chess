@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4396838363638350}
   - component: {fileID: 212653616210825694}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bPawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 64666763
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300012, guid: 3f0d5f4769a96e445977fc86d6aa3af9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

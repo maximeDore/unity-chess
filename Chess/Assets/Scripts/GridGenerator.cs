@@ -11,10 +11,13 @@ public class GridGenerator : MonoBehaviour {
 	[SerializeField]
 	private SpriteRenderer[] _board;
 
+	private BoardManager _bm;
+
 	private TileInfo[,] _tileInfo;
 
 	// Use this for initialization
 	void Start () {
+		_bm = GetComponent<BoardManager>();
 		if(_board.Length!=0){
 			GenerateGrid();
 		}
@@ -29,6 +32,9 @@ public class GridGenerator : MonoBehaviour {
 		int altTile = 0;
 		Vector2 gridSize = new Vector2(tileWidth*_nbCol,tileHeight*_nbRow);
 		for(int r=0;r<_nbRow;r++){
+			Vector2 posRook = new Vector2(tileHeight/1.5f - gridSize.x/2, r * tileHeight - gridSize.y/2);
+			Transform rook = Instantiate(_bm._PiecesRef[6],posRook, Quaternion.identity, transform);
+			rook.GetComponent<SpriteRenderer>().sortingOrder = _nbRow-r;
 			for(int c=0;c<_nbCol;c++){
 				Vector2 pos = new Vector2(tileWidth*1.5f + c*tileWidth - gridSize.x/2,tileHeight*-1 - r*tileHeight + gridSize.y/2);
 				SpriteRenderer tileRenderer = Instantiate(_board[altTile], pos, Quaternion.identity, transform);
@@ -46,11 +52,6 @@ public class GridGenerator : MonoBehaviour {
 				_tileInfo[r,c] = myTile;
 			}
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	//Structure servant à contenir un tableau qui contient les informations de toutes les tuiles
