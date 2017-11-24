@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4577397080348110}
   - component: {fileID: 212604877086976654}
   - component: {fileID: 61150050118578546}
-  - component: {fileID: 114775585516928886}
   - component: {fileID: 95771811814478308}
+  - component: {fileID: 114880383244751254}
   m_Layer: 11
   m_Name: wRook
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1398848788047426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.033722, y: 1.7562668, z: 0}
   m_LocalScale: {x: 0.9, y: 0.85, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,7 +55,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13793778, y: 0.6908187}
+  m_Offset: {x: 0.13793802, y: 0.018948197}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.4207962, y: 0.20053673}
@@ -66,7 +66,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.07, y: 3.1999998}
+  m_Size: {x: 2.0700002, y: 2.0482712}
   m_EdgeRadius: 0
 --- !u!95 &95771811814478308
 Animator:
@@ -77,7 +77,7 @@ Animator:
   m_GameObject: {fileID: 1398848788047426}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6cfffcc7851d82c449715fc992c7c615, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -85,20 +85,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114775585516928886
+--- !u!114 &114880383244751254
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1398848788047426}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8b8996f78b92949bc46b03ec73c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: b9f8b4277f71d5d429991ef4052a94f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lm:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!212 &212604877086976654
 SpriteRenderer:
   m_ObjectHideFlags: 1

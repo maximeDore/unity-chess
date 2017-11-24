@@ -17,7 +17,12 @@ public class GameManager : MonoBehaviour {
 	private static float _wavePercentage = 0;
 	public static float _WavePercentage {
 		get { return _wavePercentage; }
-		set { _wavePercentage = value; }
+		set {
+			 _wavePercentage = value;
+			 if(_wavePercentage>100){
+				 _wavePercentage=100;
+			 }
+		}
 	}
 	private static bool _play = true;
 	public static bool _Play {
@@ -33,6 +38,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		_WavePercentage = _WavePercentage+Time.deltaTime;
 		_wavePercentageDisplay.text = Mathf.Floor(_wavePercentage)+"%";
 	}
 

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4058645368404270}
   - component: {fileID: 212955923694968598}
   - component: {fileID: 114675138197389234}
-  - component: {fileID: 61519415220915144}
+  - component: {fileID: 65040575027723368}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -36,37 +36,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1832082907309782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9712374, y: 1.5496004, z: 0}
+  m_LocalPosition: {x: -0.9215699, y: 2.3486462, z: 0}
   m_LocalScale: {x: 0.85, y: 0.85, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61519415220915144
-BoxCollider2D:
+--- !u!65 &65040575027723368
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1832082907309782}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.61, y: 2.48}
-    newSize: {x: 2.61, y: 2.48}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.61, y: 2.48}
-  m_EdgeRadius: 0
+  m_Size: {x: 2.6099997, y: 2.4799998, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114675138197389234
 MonoBehaviour:
   m_ObjectHideFlags: 1

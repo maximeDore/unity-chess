@@ -13,8 +13,9 @@ public class ButtonManager : MonoBehaviour {
 	[SerializeField]
 	private Button[] _btnRefs;
 
+	// Fonction appelée au clic d'un des boutons de l'interface
 	public void SelectButton(int value) {
-		Debug.Log("Bouton #"+(value+1));
+		// Debug.Log("Bouton #"+(value+1));
 		BoardManager._PieceIndex = value;
 	}
 

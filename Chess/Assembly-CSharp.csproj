@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GridGenerator.cs" />
      <Compile Include="Assets\Scripts\Piece.cs" />
+     <Compile Include="Assets\Scripts\Rook.cs" />
      <Compile Include="Assets\Scripts\TileManager.cs" />
      <None Include="Assets\SpriteSheetImporter\Editor\Readme.txt" />
  <Reference Include="UnityEngine.UI">

@@ -33,6 +33,8 @@ public class Piece : MonoBehaviour {
 	void Start () {
 		_animator = GetComponent<Animator>();
 		switch (pieceIndex) {
+			case -1:
+				break;
 			case 0:
 				StartCoroutine(Bishop());
 				break;
@@ -62,7 +64,7 @@ public class Piece : MonoBehaviour {
 	private IEnumerator Bishop() {
 		while(GameManager._Play){
 			if(!_coinInstance){
-				yield return new WaitForSeconds(2);
+				yield return new WaitForSeconds(10);
 				Transform coin = Instantiate(moneyRef, transform.position, Quaternion.identity, transform);
 				_coinInstance = true;
 				if(transform.childCount>=1){
@@ -113,8 +115,4 @@ public class Piece : MonoBehaviour {
 	void Hand() {
 
 	}
-
-	// void OnTriggerEnter2D(Collider2D other) {
-	// 	if(pieceIndex = )
-	// }
 }
