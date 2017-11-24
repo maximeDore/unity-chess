@@ -45,10 +45,10 @@ public class Piece : MonoBehaviour {
 				Shield();
 				break;
 			case 3:
-				Bomb();
+				Invoke("Bomb",1);
 				break;
 			case 4:
-				Hand();
+				Invoke("Hand",2);
 				break;
 			default:
 				Debug.Log("===> Erreur : index invalide.");
@@ -87,8 +87,8 @@ public class Piece : MonoBehaviour {
 	private IEnumerator Pawn() {
 		while(GameManager._Play){
 			_animator.SetBool("isAttacking", false);
-			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, Mathf.Infinity, _lm);
-			if (hit.collider != null && hit.collider.tag == "Piece") {
+			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, Mathf.Infinity, _lm);
+			if (hit.collider != null && hit.collider.tag == "Enemy") {
 				Debug.Log("hit : "+hit.collider.name);
 				StartCoroutine(PawnAttack());
 				yield return new WaitForSeconds(0.99f);				
@@ -101,7 +101,7 @@ public class Piece : MonoBehaviour {
 		_animator.SetBool("isAttacking", true);
 		yield return new WaitForSeconds(0.5f);
 		Vector2 posThrow = new Vector2(transform.position.x+1,transform.position.y + 0.5f);
-		Transform projectile = Instantiate(projectileRef, posThrow, Quaternion.Euler(new Vector3(0, 0, 170)));
+		Transform projectile = Instantiate(projectileRef, posThrow, Quaternion.identity);
 	}
 
 	void Shield() {
@@ -109,10 +109,16 @@ public class Piece : MonoBehaviour {
 	}
 
 	void Bomb() {
-		_animator.SetTrigger("isExploding");
+		_animator.SetTrigger("isTriggered");
+		Invoke("DestroyPiece",1);
 	}
 
 	void Hand() {
+		_animator.SetTrigger("isTriggered");
+		Invoke("DestroyPiece",1);
+	}
 
+	void DestroyPiece() {
+		Destroy(gameObject);
 	}
 }

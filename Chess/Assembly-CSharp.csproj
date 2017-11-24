@@ -51,13 +51,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Bishop.cs" />
      <Compile Include="Assets\Scripts\BoardManager.cs" />
+     <Compile Include="Assets\Scripts\Bomb.cs" />
      <Compile Include="Assets\Scripts\ButtonManager.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\EnemyManager.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GridGenerator.cs" />
+     <Compile Include="Assets\Scripts\Hand.cs" />
+     <Compile Include="Assets\Scripts\Pawn.cs" />
      <Compile Include="Assets\Scripts\Piece.cs" />
+     <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Rook.cs" />
+     <Compile Include="Assets\Scripts\Shield.cs" />
      <Compile Include="Assets\Scripts\TileManager.cs" />
      <None Include="Assets\SpriteSheetImporter\Editor\Readme.txt" />
  <Reference Include="UnityEngine.UI">

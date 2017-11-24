@@ -9,10 +9,11 @@ public class TileManager : MonoBehaviour {
 		get { return _pieceOnTile; }
 		set { _pieceOnTile = value; }
 	}
+	private TileManager _tileInstance;
 
 	// Use this for initialization
 	void Start () {
-		
+		_tileInstance = this;
 	}
 	
 	// Update is called once per frame

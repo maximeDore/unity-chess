@@ -255,7 +255,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4556691456146638, guid: c28b50274f3633f4595b86932aa60f49, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4556691456146638, guid: c28b50274f3633f4595b86932aa60f49, type: 2}
       propertyPath: m_LocalScale.y
@@ -383,7 +383,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &585818088
 GameObject:
@@ -592,7 +592,7 @@ Transform:
   m_Children:
   - {fileID: 1004774667}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &808809943
 MonoBehaviour:
@@ -615,7 +615,7 @@ MonoBehaviour:
   - {fileID: 4577397080348110, guid: e3f6c561ca37bf64a92930eb6634c26a, type: 2}
   - {fileID: 4081332078937896, guid: 33fdb0f1a9c0fa644978d3aa54da5039, type: 2}
   - {fileID: 4556691456146638, guid: c28b50274f3633f4595b86932aa60f49, type: 2}
-  _projectileRef: {fileID: 4354814727709416, guid: 17125ac489806b34baf945c5670b7b66,
+  _projectileRef: {fileID: 4122182443031374, guid: 6fa7a8a63adff644fa4a3e80ea597c27,
     type: 2}
   _moneyRef: {fileID: 4058645368404270, guid: de90c14dcb979ac4c97e687cb899d4b2, type: 2}
   _piecesPrice: 3200000064000000320000009600000032000000
@@ -719,48 +719,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8e786e751cb67c43a967de76e31fbd7, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &940643753
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4577397080348110, guid: e3f6c561ca37bf64a92930eb6634c26a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.033722
-      objectReference: {fileID: 0}
-    - target: {fileID: 4577397080348110, guid: e3f6c561ca37bf64a92930eb6634c26a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.7562668
-      objectReference: {fileID: 0}
-    - target: {fileID: 4577397080348110, guid: e3f6c561ca37bf64a92930eb6634c26a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4577397080348110, guid: e3f6c561ca37bf64a92930eb6634c26a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4577397080348110, guid: e3f6c561ca37bf64a92930eb6634c26a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4577397080348110, guid: e3f6c561ca37bf64a92930eb6634c26a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4577397080348110, guid: e3f6c561ca37bf64a92930eb6634c26a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4577397080348110, guid: e3f6c561ca37bf64a92930eb6634c26a, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e3f6c561ca37bf64a92930eb6634c26a, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &948666114
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +779,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &969749559 stripped
 RectTransform:
@@ -971,7 +929,7 @@ RectTransform:
   - {fileID: 468758253}
   - {fileID: 1758294958}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1475,7 +1433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2110118314 stripped
 MonoBehaviour:

@@ -54,7 +54,7 @@ public class BoardManager : MonoBehaviour {
 				pieceScript.PieceIndex = _PieceIndex;
 				pieceScript.ProjectileRef = _ProjectileRef;
 				pieceScript.MoneyRef = _MoneyRef;
-				if(_pieceIndex!=3){
+				if(_pieceIndex!=3 && _pieceIndex!=4){
 					script._PieceOnTile = true;
 				}
 				GameManager._Money -= _piecesPrice[_PieceIndex];

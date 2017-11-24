@@ -10,6 +10,7 @@ public class Rook : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_animator = GetComponent<Animator>();
+		_animator.applyRootMotion = true;
 	}
 	
 	// Update is called once per frame
@@ -18,9 +19,10 @@ public class Rook : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.GetComponent<Collider>().tag == "enemy"){
+		if(other.GetComponent<Collider>().tag == "Enemy"){
 			// other.Kill();
 			if(!isTriggered){
+				_animator.applyRootMotion = false;
 				isTriggered=true;
 				_animator.SetTrigger("isTriggered");
 			}
