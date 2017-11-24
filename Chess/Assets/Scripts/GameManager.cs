@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour {
 	private Text _wavePercentageDisplay;
 	private static Text _moneytor;
 
-	private static int _money = 1000;
+	private static int _money = 50;
 	public static int _Money {
 		get { return _money; }
-		set { _money = value; }
+		set { _money = value; GameManager.ShowMoney(); }
 	}
 	private static float _wavePercentage = 0;
 	public static float _WavePercentage {

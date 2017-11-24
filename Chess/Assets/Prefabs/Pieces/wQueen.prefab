@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61694555273003460}
   - component: {fileID: 114144628934945968}
   - component: {fileID: 95963647441651096}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: wQueen
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4119425108001414}
   - component: {fileID: 212876312294739688}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: white_spearhandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4898242293758086}
   - component: {fileID: 212039921385552020}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: white_hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4380252461399320}
   - component: {fileID: 212194168668747876}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: white_spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 61549533691387188}
   - component: {fileID: 114412174967842248}
   - component: {fileID: 95385700892603814}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: wKnight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

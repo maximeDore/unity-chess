@@ -18,6 +18,11 @@ public class Piece : MonoBehaviour {
 		get { return projectileRef; }
 		set { projectileRef = value; }
 	}
+	private bool _coinInstance;
+	public bool _CoinInstance {
+		get { return _coinInstance; }
+		set { _coinInstance = value; }
+	}
 	private Transform moneyRef;
 	public Transform MoneyRef {
 		get { return moneyRef; }
@@ -41,7 +46,7 @@ public class Piece : MonoBehaviour {
 				Bomb();
 				break;
 			case 4:
-				Knight();
+				Hand();
 				break;
 			default:
 				Debug.Log("===> Erreur : index invalide.");
@@ -56,27 +61,45 @@ public class Piece : MonoBehaviour {
 
 	private IEnumerator Bishop() {
 		while(GameManager._Play){
-			yield return new WaitForSeconds(5);
-			Instantiate(moneyRef ,transform.position, Quaternion.identity);
+			if(!_coinInstance){
+				yield return new WaitForSeconds(2);
+				Transform coin = Instantiate(moneyRef, transform.position, Quaternion.identity, transform);
+				_coinInstance = true;
+				if(transform.childCount>=1){
+					StartCoroutine(BishopCoinLife(coin));
+				}
+			}
+			yield return null;
+		}
+	}
+
+	private IEnumerator BishopCoinLife(Transform coin) {
+		int coinTimer = 5;
+		yield return new WaitForSeconds(coinTimer);
+		if(coin!=null){
+			Destroy(coin.gameObject);
+			_CoinInstance = false;
 		}
 	}
 
 	private IEnumerator Pawn() {
 		while(GameManager._Play){
 			_animator.SetBool("isAttacking", false);
-			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, _lm);
-			if (hit.collider != null) {
+			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, Mathf.Infinity, _lm);
+			if (hit.collider != null && hit.collider.tag == "Piece") {
 				Debug.Log("hit : "+hit.collider.name);
-				PawnAttack();
-			yield return new WaitForSeconds(0.5f);
+				StartCoroutine(PawnAttack());
+				yield return new WaitForSeconds(0.99f);				
 			}
+			yield return null;
 		}
 	}
 
-	private void PawnAttack() {
+	private IEnumerator PawnAttack() {
 		_animator.SetBool("isAttacking", true);
+		yield return new WaitForSeconds(0.5f);
 		Vector2 posThrow = new Vector2(transform.position.x+1,transform.position.y + 0.5f);
-		Instantiate(projectileRef, posThrow, Quaternion.identity);
+		Transform projectile = Instantiate(projectileRef, posThrow, Quaternion.Euler(new Vector3(0, 0, 170)));
 	}
 
 	void Shield() {
@@ -87,7 +110,11 @@ public class Piece : MonoBehaviour {
 		_animator.SetTrigger("isExploding");
 	}
 
-	void Knight() {
+	void Hand() {
 
 	}
+
+	// void OnTriggerEnter2D(Collider2D other) {
+	// 	if(pieceIndex = )
+	// }
 }

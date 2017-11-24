@@ -29,6 +29,9 @@ public class BoardManager : MonoBehaviour {
 	}
 	[SerializeField]
 	public int[] _piecesPrice;
+	public int[] _PiecesPrice {
+		get { return _piecesPrice; }
+	}
 
 	void Update() {
 		if (Input.GetMouseButtonDown(0)) {

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4556691456146638}
   - component: {fileID: 212827578835150800}
   - component: {fileID: 61860889751922250}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: wKing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

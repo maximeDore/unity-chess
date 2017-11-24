@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61150050118578546}
   - component: {fileID: 114775585516928886}
   - component: {fileID: 95771811814478308}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: wRook
   m_TagString: Untagged
   m_Icon: {fileID: 0}

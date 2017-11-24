@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61586852142918390}
   - component: {fileID: 114078105941861248}
   - component: {fileID: 95693256919120682}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: wBishop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

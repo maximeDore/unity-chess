@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4059631531668150}
   - component: {fileID: 212416094170894058}
   - component: {fileID: 95267434033850546}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 61443379080508194}
   - component: {fileID: 95462663039239506}
   - component: {fileID: 114683510462129424}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: wBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
