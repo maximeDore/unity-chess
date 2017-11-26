@@ -10,7 +10,11 @@ public class Enemy : MonoBehaviour {
 	}
 	private bool _isDead;
 	private Animator _animator;
-	private int _health = 5;
+	private int _health;
+	public int _Health {
+		get { return _health; }
+		set { _health = value; }
+	}
 	private EnemyManager _em;
 	private BoxCollider2D _collider;
 
@@ -33,7 +37,7 @@ public class Enemy : MonoBehaviour {
 	}
 
 	public void Damage() {
-		_health--;
+		_Health--;
 		if(_health<=0){
 			Kill();
 		}
@@ -53,8 +57,7 @@ public class Enemy : MonoBehaviour {
 		while (_isAttacking) {
 			yield return new WaitForSeconds(1);
 			if(_isAttacking){
-				Debug.Log("ouch");
-				piece.Health--; 
+				piece._Health--; 
 			}
 		}
 		yield return null;

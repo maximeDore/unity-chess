@@ -5,7 +5,7 @@ using UnityEngine;
 public class Rook : MonoBehaviour {
 
 	private bool isTriggered;
-	private float _speed = 10f;
+	private float _speed = 5f;
 
 	// Use this for initialization
 	void Start () {

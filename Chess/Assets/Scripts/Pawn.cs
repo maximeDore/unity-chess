@@ -6,7 +6,6 @@ public class Pawn : Piece {
 
 	[SerializeField]
 	private LayerMask _lm;
-	private Animator _animator;	
 	private bool _isAttacking = false;
 
 	// Use this for initialization

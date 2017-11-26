@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void Play() {
-		_Play = true;
+		_play = true;
 		Time.timeScale = 1;
 	}
 

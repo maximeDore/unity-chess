@@ -19,10 +19,11 @@ public class EnemyManager : MonoBehaviour {
 		get { return _enemyIndex; }
 		set { _enemyIndex = value; }
 	}
+	private float _randIndex;
 
 	// Use this for initialization
 	void Start () {
-		// StartCoroutine(SpawnEnemy());
+		StartCoroutine(SpawnEnemy());
 	}
 	
 	// Update is called once per frame
@@ -31,9 +32,11 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	private IEnumerator SpawnEnemy(){
-		while(GameManager._Play){
-			yield return new WaitForSeconds(5);
-			Instantiate(_enemyRef[_enemyIndex],_spawn[1].position,Quaternion.identity, transform);
+		while(true){
+			_enemyIndex = Random.Range(0,2);
+			yield return new WaitForSeconds(4.75f);
+			Transform newEnemy = Instantiate(_enemyRef[_enemyIndex],_spawn[1].position,Quaternion.identity, transform);
+			newEnemy.GetComponent<Enemy>()._Health = _enemyHealth[_enemyIndex];
 		}
 	}
 }

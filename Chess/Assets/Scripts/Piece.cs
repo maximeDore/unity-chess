@@ -5,6 +5,12 @@ using UnityEngine;
 public class Piece : MonoBehaviour {
 
 	private bool _isDead;
+	protected TileManager _tile;
+	public TileManager _Tile {
+		get { return _tile; }
+		set { _tile = value; }
+	}
+	protected Animator _animator;
 	protected Transform projectileRef;
 	public Transform ProjectileRef {
 		get { return projectileRef; }
@@ -21,12 +27,12 @@ public class Piece : MonoBehaviour {
 		get { return moneyRef; }
 		set { moneyRef = value; }
 	}
-	protected int health;
-	public int Health {
-		get { return health; }
+	protected int _health;
+	public int _Health {
+		get { return _health; }
 		set {
-			health = value;
-			if(health<=0){
+			_health = value;
+			if(_health<=0){
 				Kill();
 			}
 		}
@@ -35,11 +41,16 @@ public class Piece : MonoBehaviour {
 	protected void Kill() {
 		if(!_isDead){
 			_isDead=true;
+			_animator.SetTrigger("isKilled");
 			Invoke("DestroyPiece",1);
 		}
 	}
 
 	protected void DestroyPiece() {
 		Destroy(gameObject);
+	}
+
+	void OnDestroy() {
+		_Tile._PieceOnTile = false;
 	}
 }

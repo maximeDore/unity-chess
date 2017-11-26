@@ -13,6 +13,7 @@ public class Bishop : Piece {
 
 	// Use this for initialization
 	void Start () {
+		_animator = GetComponent<Animator>();
 		StartCoroutine(SpawnCoin());
 	}
 

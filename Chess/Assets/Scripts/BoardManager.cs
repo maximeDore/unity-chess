@@ -57,7 +57,8 @@ public class BoardManager : MonoBehaviour {
 			if(_pieceIndex!=-1 && script._PieceOnTile==false && GameManager._Money>=_piecesPrice[_PieceIndex]){
 				Transform newPiece = Instantiate(_piecesRef[_pieceIndex], obj.GetComponent<Transform>());
 				Piece pieceScript = newPiece.GetComponent<Piece>();
-				pieceScript.Health = _PiecesHealth[_PieceIndex];
+				pieceScript._Tile = script;
+				pieceScript._Health = _PiecesHealth[_PieceIndex];
 				if(newPiece.GetComponent<Pawn>()!=null){
 					pieceScript.ProjectileRef = _ProjectileRef;
 				}

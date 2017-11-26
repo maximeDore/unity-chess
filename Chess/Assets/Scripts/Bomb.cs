@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Bomb : Piece {
 
-	private Animator _animator;
 	private BoxCollider2D _collider;
 	private TileManager _tm;
 	private string _animationName = "isExploding";
