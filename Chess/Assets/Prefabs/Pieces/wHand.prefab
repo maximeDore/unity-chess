@@ -20,8 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4482099388973780}
   - component: {fileID: 95378533427253180}
-  - component: {fileID: 114457279711796620}
   - component: {fileID: 212195577648940916}
+  - component: {fileID: 114125023569658502}
+  - component: {fileID: 61011427946776434}
   m_Layer: 0
   m_Name: wHand
   m_TagString: Untagged
@@ -52,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1368752491550818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4558359783687082}
@@ -67,11 +68,36 @@ Transform:
   m_GameObject: {fileID: 1494299467256954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4482099388973780}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61011427946776434
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368752491550818}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.04335749, y: 0.03230548}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.519708, y: 0.48637992}
+    oldSize: {x: 2.2, y: 1.91}
+    newSize: {x: 2.2, y: 1.91}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3519945, y: 1.8974175}
+  m_EdgeRadius: 0
 --- !u!95 &95378533427253180
 Animator:
   serializedVersion: 3
@@ -89,7 +115,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114457279711796620
+--- !u!114 &114125023569658502
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,12 +123,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1368752491550818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8b8996f78b92949bc46b03ec73c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 089f429c97d452a409bc8dae174a24f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lm:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!212 &212195577648940916
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shield : MonoBehaviour {
+public class Shield : Piece {
 
 	// Use this for initialization
 	void Start () {

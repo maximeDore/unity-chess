@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 212182756088845344}
   - component: {fileID: 61443379080508194}
   - component: {fileID: 95462663039239506}
-  - component: {fileID: 114683510462129424}
+  - component: {fileID: 114009875847314910}
   m_Layer: 11
   m_Name: wBomb
   m_TagString: Untagged
@@ -83,10 +83,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0276528, y: 0.6255346}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.48480615, y: 0.28280047}
@@ -97,7 +97,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.82, y: 2.88}
+  m_Size: {x: 6.1374235, y: 5.5590487}
   m_EdgeRadius: 0
 --- !u!95 &95267434033850546
 Animator:
@@ -133,7 +133,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114683510462129424
+--- !u!114 &114009875847314910
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -141,12 +141,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1929291867613112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8b8996f78b92949bc46b03ec73c4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: ad9a14ac6ee179e46bb2295a43cb76db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lm:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!212 &212182756088845344
 SpriteRenderer:
   m_ObjectHideFlags: 1

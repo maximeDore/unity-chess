@@ -14,9 +14,9 @@ public class Coin : MonoBehaviour {
 	}
 
 	//Appelée lorsqu'on clique sur l'objet
-	void OnMouseDown() {
+	void OnMouseEnter() {
 		GameManager._Money += 25;
 		Destroy(gameObject);
-		transform.parent.GetComponent<Piece>()._CoinInstance = false;
+		transform.parent.GetComponent<Bishop>()._CoinExists = false;
 	}
 }

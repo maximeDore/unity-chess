@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4081332078937896}
   - component: {fileID: 212970324840286968}
   - component: {fileID: 61694555273003460}
-  - component: {fileID: 114144628934945968}
   - component: {fileID: 95963647441651096}
   m_Layer: 11
   m_Name: wQueen
@@ -85,20 +84,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114144628934945968
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1838981941799382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8b8996f78b92949bc46b03ec73c4d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lm:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!212 &212970324840286968
 SpriteRenderer:
   m_ObjectHideFlags: 1

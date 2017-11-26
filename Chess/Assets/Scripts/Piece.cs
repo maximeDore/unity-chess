@@ -4,121 +4,42 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour {
 
-	[SerializeField]
-	private LayerMask _lm;
-	private Animator _animator;
-	private Transform[] piecesRef;
-	private int pieceIndex;
-	public int PieceIndex {
-		get { return pieceIndex; }
-		set { pieceIndex = value; }
-	}
-	private Transform projectileRef;
+	private bool _isDead;
+	protected Transform projectileRef;
 	public Transform ProjectileRef {
 		get { return projectileRef; }
 		set { projectileRef = value; }
 	}
-	private bool _coinInstance;
-	public bool _CoinInstance {
-		get { return _coinInstance; }
-		set { _coinInstance = value; }
+	protected Transform[] piecesRef;
+	protected int pieceIndex;
+	public int PieceIndex {
+		get { return pieceIndex; }
+		set { pieceIndex = value; }
 	}
-	private Transform moneyRef;
+	protected Transform moneyRef;
 	public Transform MoneyRef {
 		get { return moneyRef; }
 		set { moneyRef = value; }
 	}
-
-	// Use this for initialization
-	void Start () {
-		_animator = GetComponent<Animator>();
-		switch (pieceIndex) {
-			case -1:
-				break;
-			case 0:
-				StartCoroutine(Bishop());
-				break;
-			case 1:
-				StartCoroutine(Pawn());
-				break;
-			case 2:
-				Shield();
-				break;
-			case 3:
-				Invoke("Bomb",1);
-				break;
-			case 4:
-				Invoke("Hand",2);
-				break;
-			default:
-				Debug.Log("===> Erreur : index invalide.");
-				break;
-		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-	private IEnumerator Bishop() {
-		while(GameManager._Play){
-			if(!_coinInstance){
-				yield return new WaitForSeconds(10);
-				Transform coin = Instantiate(moneyRef, transform.position, Quaternion.identity, transform);
-				_coinInstance = true;
-				if(transform.childCount>=1){
-					StartCoroutine(BishopCoinLife(coin));
-				}
+	protected int health;
+	public int Health {
+		get { return health; }
+		set {
+			health = value;
+			if(health<=0){
+				Kill();
 			}
-			yield return null;
 		}
 	}
 
-	private IEnumerator BishopCoinLife(Transform coin) {
-		int coinTimer = 5;
-		yield return new WaitForSeconds(coinTimer);
-		if(coin!=null){
-			Destroy(coin.gameObject);
-			_CoinInstance = false;
+	protected void Kill() {
+		if(!_isDead){
+			_isDead=true;
+			Invoke("DestroyPiece",1);
 		}
 	}
 
-	private IEnumerator Pawn() {
-		while(GameManager._Play){
-			_animator.SetBool("isAttacking", false);
-			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, Mathf.Infinity, _lm);
-			if (hit.collider != null && hit.collider.tag == "Enemy") {
-				Debug.Log("hit : "+hit.collider.name);
-				StartCoroutine(PawnAttack());
-				yield return new WaitForSeconds(0.99f);				
-			}
-			yield return null;
-		}
-	}
-
-	private IEnumerator PawnAttack() {
-		_animator.SetBool("isAttacking", true);
-		yield return new WaitForSeconds(0.5f);
-		Vector2 posThrow = new Vector2(transform.position.x+1,transform.position.y + 0.5f);
-		Transform projectile = Instantiate(projectileRef, posThrow, Quaternion.identity);
-	}
-
-	void Shield() {
-
-	}
-
-	void Bomb() {
-		_animator.SetTrigger("isTriggered");
-		Invoke("DestroyPiece",1);
-	}
-
-	void Hand() {
-		_animator.SetTrigger("isTriggered");
-		Invoke("DestroyPiece",1);
-	}
-
-	void DestroyPiece() {
+	protected void DestroyPiece() {
 		Destroy(gameObject);
 	}
 }

@@ -21,11 +21,12 @@ GameObject:
   - component: {fileID: 4931653454224464}
   - component: {fileID: 212086594408690344}
   - component: {fileID: 61923191369761328}
-  - component: {fileID: 114421522804015238}
   - component: {fileID: 95381528817639924}
+  - component: {fileID: 50077676131929044}
+  - component: {fileID: 114603979106005868}
   m_Layer: 11
   m_Name: wShield
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,6 +44,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50077676131929044
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1570521278993856}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61923191369761328
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -85,7 +106,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114421522804015238
+--- !u!114 &114603979106005868
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,9 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8b8996f78b92949bc46b03ec73c4d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lm:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!212 &212086594408690344
 SpriteRenderer:
   m_ObjectHideFlags: 1

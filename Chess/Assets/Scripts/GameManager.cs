@@ -25,14 +25,23 @@ public class GameManager : MonoBehaviour {
 			 }
 		}
 	}
-	private static bool _play = true;	// Partie en cours ou non
+	private static bool _play;	// Partie en cours ou non
 	public static bool _Play {
 		get { return _play; }
 		set { _play = value; }
 	}
+	public static Vector2 _CAMERASIZE {
+		get { return new Vector2(Camera.main.orthographicSize * Screen.width / Screen.height, Camera.main.orthographicSize * 2); }
+	}
+
+	public void Play() {
+		_Play = true;
+		Time.timeScale = 1;
+	}
 
 	// Use this for initialization
 	void Start () {
+		Time.timeScale = 0;
 		_moneytor = GameObject.Find("Money").GetComponent<Text>();
 		ShowMoney();
 	}

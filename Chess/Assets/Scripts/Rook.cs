@@ -5,12 +5,11 @@ using UnityEngine;
 public class Rook : MonoBehaviour {
 
 	private bool isTriggered;
-	private Animator _animator;
+	private float _speed = 10f;
 
 	// Use this for initialization
 	void Start () {
-		_animator = GetComponent<Animator>();
-		_animator.applyRootMotion = true;
+
 	}
 	
 	// Update is called once per frame
@@ -18,14 +17,26 @@ public class Rook : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if(other.GetComponent<Collider>().tag == "Enemy"){
-			// other.Kill();
-			if(!isTriggered){
-				_animator.applyRootMotion = false;
-				isTriggered=true;
-				_animator.SetTrigger("isTriggered");
+	private IEnumerator IsTriggered() {
+		while(true){
+			isTriggered=true;
+			transform.Translate(Vector3.right * _speed * Time.deltaTime);
+			if(transform.position.x > GameManager._CAMERASIZE.x){
+				DestroyRook();
 			}
+			yield return null;
 		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.gameObject.tag == "Enemy"){
+			other.GetComponent<Enemy>().Kill();
+			StartCoroutine(IsTriggered());
+			IsTriggered();
+		}
+	}
+	
+	void DestroyRook() {
+		Destroy(gameObject);
 	}
 }

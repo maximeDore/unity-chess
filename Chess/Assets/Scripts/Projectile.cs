@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
-	private float _speed = 10f;
+	private float _speed = 12f;
+	private float _delay = 0.05f;
 
 	// Use this for initialization
 	void Start () {
@@ -13,15 +14,16 @@ public class Projectile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate(Vector3.right * _speed * Time.deltaTime);
-		if(transform.position.x >= 15){	// ////////////////////////////////////////////////////HARDCODE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ \\
-			Destroy(gameObject);
+		transform.Translate(new Vector3(-1, -0.17f, 0) * _speed * Time.deltaTime);
+		if(transform.position.x >= GameManager._CAMERASIZE.x){	
+			Destroy(gameObject,_delay);
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.tag == "Enemy"){
-			// other.GetComponent<Enemy>().Damage();
+		if(other.gameObject.tag == "Enemy"){
+			other.GetComponent<Enemy>().Damage();
+			Destroy(gameObject,_delay);
 		}
 	}
 }

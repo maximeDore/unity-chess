@@ -69,7 +69,6 @@ GameObject:
   - component: {fileID: 4157528642755408}
   - component: {fileID: 212211772212579548}
   - component: {fileID: 61549533691387188}
-  - component: {fileID: 114412174967842248}
   - component: {fileID: 95385700892603814}
   m_Layer: 11
   m_Name: wKnight
@@ -175,20 +174,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114412174967842248
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1673692509751544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8b8996f78b92949bc46b03ec73c4d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lm:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!212 &212039921385552020
 SpriteRenderer:
   m_ObjectHideFlags: 1
