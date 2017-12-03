@@ -21,7 +21,6 @@ public class CoinGenerator : MonoBehaviour {
 		while(true){
 			while(GameManager._Play){
 				Vector2 pos = new Vector2(Random.Range(-5,10),Random.Range(3.1f,-5.3f));
-				Debug.Log(pos);
 				yield return new WaitForSeconds(15f);
 				Instantiate(_coinRef,pos,Quaternion.identity,transform);
 			}

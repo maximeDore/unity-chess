@@ -10,7 +10,7 @@ public class MusicManager : MonoBehaviour {
 	private AudioClip _normal;
 	private AudioSource _audio;
 	private bool _isFinal;
-	static private bool _isMuted;
+	static protected bool _isMuted;
 	static public bool _IsMuted {
 		get { return _isMuted; }
 	}

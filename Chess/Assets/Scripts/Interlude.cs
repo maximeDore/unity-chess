@@ -7,6 +7,8 @@ public class Interlude : MonoBehaviour {
 
 	[SerializeField]
 	private Text _waveCount;
+	[SerializeField]
+	private Text _waveStatus;
 	private GameManager _gm;
 	private Animator _animator;
 
@@ -16,35 +18,38 @@ public class Interlude : MonoBehaviour {
 		if(_waveCount!=null){
 			_waveCount.text = GameManager._Lvl+"/3";
 		}
+		if(_waveStatus!=null){
+			_waveStatus.text = GameManager._Status;
+		}
 		_animator = GetComponent<Animator>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
+	// Action du bouton X
 	public void Retour() {
 		_animator.SetTrigger("isSliding");
 		Invoke("RetourAuMenu",1);
 	}
 
+	// Retourne au menu
 	public void RetourAuMenu() {
-		GameManager._Money=50;
-		GameManager._WavePercentage=0;
+		_gm.ChangerScene("menu");
+	}
+
+	public void Credits() {
 		_gm.ChangerScene("credits");
 	}
 
-
+	// Action du bouton CONTINUER
 	public void Suivant() {
 		_animator.SetTrigger("isSliding");
 		Invoke("VagueSuivante",1);
 	}
 
+	// Retourne au jeu et change de niveau
 	void VagueSuivante() {
-		GameManager._Money=50;
-		GameManager._WavePercentage=0;
-		GameManager._Lvl++;
+		if(GameManager._StatusMessage[0] == GameManager._Status){
+			GameManager._Lvl++;
+		}
 		if(GameManager._Lvl<=3){
 			_gm.ChangerScene("main");
 		} else {

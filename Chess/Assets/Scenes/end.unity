@@ -195,7 +195,7 @@ RectTransform:
   m_GameObject: {fileID: 82111411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.021655334, y: 0.021655334, z: 0.021655334}
+  m_LocalScale: {x: 0.028896444, y: 0.028896444, z: 0.028896444}
   m_Children:
   - {fileID: 102381676}
   m_Father: {fileID: 0}
@@ -464,7 +464,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 102381677}
-        m_MethodName: RetourAuMenu
+        m_MethodName: Credits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -685,7 +685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waveCount: {fileID: 0}
-  _wavePercentageDisplay: {fileID: 0}
 --- !u!4 &1828497435
 Transform:
   m_ObjectHideFlags: 0

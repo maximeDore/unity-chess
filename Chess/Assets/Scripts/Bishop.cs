@@ -24,7 +24,7 @@ public class Bishop : Piece {
 				Transform coin = Instantiate(moneyRef, transform.position, Quaternion.identity, transform);
 				_CoinExists = true;
 				if(transform.childCount>=1){
-					StartCoroutine(BishopCoinLife(coin));
+					// StartCoroutine(BishopCoinLife(coin));
 				}
 			}
 			yield return null;

@@ -5,11 +5,12 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
 	private float _speed = 12f;
-	private float _delay = 0.05f;
+	private float _delay = 0.1f;
+	private AudioSource _sfx;
 
 	// Use this for initialization
 	void Start () {
-		
+		_sfx = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -22,6 +23,7 @@ public class Projectile : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag == "Enemy"){
+			_sfx.Play();
 			other.GetComponent<Enemy>().Damage();
 			Destroy(gameObject,_delay);
 		}

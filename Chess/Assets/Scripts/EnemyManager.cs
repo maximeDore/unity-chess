@@ -5,35 +5,36 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
 
 	[SerializeField]
-	private Transform[] _spawn;
+	private Transform[] _spawn;			// Point de départ des ennemis, position d'instanciation (0-4)
 	[SerializeField]
-	private Transform[] _enemyRef;
+	private Transform[] _enemyRef;		// Prefabs des ennemis	(0 = Pawn / 1 = Knight / 2 = King)
 	[SerializeField]
-	private int[] _enemyHealth;
+	private int[] _enemyHealth;			// Points de vie des ennemis (0 = 10 / 1 = 15 / 2 = 20)
 	public int[] _EnemyHealth {
 		get { return _enemyHealth; }
 	}
 	[SerializeField]
-	private int _enemyIndex = 0;
+	private int _enemyIndex = 0;		// Index qui définit le type d'ennemi à instancier à partir de _enemyRef[]
 	public int _EnemyIndex {
 		get { return _enemyIndex; }
 		set { _enemyIndex = value; }
 	}
-	private int _phase = 0;
-	private int _enemyRow;
-	private bool _finalWave;
+	private int _phase = 0;				// Section du niveau qui définit la difficulté (0 = 0% / 1 = 1-25% / 2 = 26-50% / 3 = 51-75% / 4 = 76-99% / 5 = 100%)
+	private int _enemyRow;				// Index de la rangée où l'ennemi est instancié à partir de _spawn[]
+	private bool _finalWave;			// Est-ce qu'il s'agit de la vague finale? (Utilisée pour éviter la répétition de la vague pendant la pause du 100%)
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(StartWave());
+		StartCoroutine(StartWave(10f));
 	}
 	
-	// Gestionnaire de vague
-	private IEnumerator StartWave () {
-		yield return new WaitForSeconds(10f);	// Délai avant l'instantiation des ennemis
+	// Démarrage de la vague avec un délai
+	private IEnumerator StartWave(float delay) {
+		yield return new WaitForSeconds(delay);	// Délai avant l'arrivée des ennemis
 		StartCoroutine(SpawnQueue());
 	}
 
+	// Définition des différentes phases de la vague
 	private IEnumerator SpawnQueue(){
 		while(true){
 			_enemyRow = Random.Range(0,_spawn.Length);
@@ -51,13 +52,16 @@ public class EnemyManager : MonoBehaviour {
 				_phase = 4;
 			} else {
 				if(!_finalWave){
+					GameManager.FinalPopUp();
 					yield return new WaitForSeconds(10f);
 					StartCoroutine(FinalCountdown());
 					_finalWave = true;
 				}
 				_phase = 5;
 			}
-			Debug.Log(_phase);
+			if(_phase!=0){
+				Debug.Log(_phase);
+			}
 			if(_phase==0){
 				yield return null;
 			} else if(_phase==1){
@@ -75,6 +79,7 @@ public class EnemyManager : MonoBehaviour {
 		}
 	}
 
+	// Instancier les différents ennemis selon la phase
 	private IEnumerator SpawnEnemy() {
 		int i = 0;
 		if(_phase>=3){
@@ -89,6 +94,7 @@ public class EnemyManager : MonoBehaviour {
 		yield return null;
 	}
 
+	// Instancier le roi
 	private IEnumerator SpawnKing(){
 		Transform newEnemy = Instantiate(_enemyRef[2],_spawn[_enemyRow].position,Quaternion.identity, transform);
 		Enemy newEnemyScript = newEnemy.GetComponent<Enemy>();
