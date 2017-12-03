@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Rook : MonoBehaviour {
 
-	private bool isTriggered;
-	private float _speed = 5f;
+	private bool _isTriggered;
+	private float _speed = 6f;
 
 	// Use this for initialization
 	void Start () {
@@ -19,8 +19,10 @@ public class Rook : MonoBehaviour {
 
 	private IEnumerator IsTriggered() {
 		while(true){
-			isTriggered=true;
-			transform.Translate(Vector3.right * _speed * Time.deltaTime);
+			if(_isTriggered){
+				transform.Translate(Vector3.right * _speed * Time.deltaTime);
+			}
+			_isTriggered=true;
 			if(transform.position.x > GameManager._CAMERASIZE.x){
 				DestroyRook();
 			}
@@ -31,7 +33,9 @@ public class Rook : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag == "Enemy"){
 			other.GetComponent<Enemy>().Kill();
-			StartCoroutine(IsTriggered());
+			if(!_isTriggered){
+				StartCoroutine(IsTriggered());
+			}
 			IsTriggered();
 		}
 	}

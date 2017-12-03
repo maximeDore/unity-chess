@@ -10,10 +10,22 @@ public class GridGenerator : MonoBehaviour {
 	private int _nbRow;
 	[SerializeField]
 	private SpriteRenderer[] _board;
-
 	private BoardManager _bm;
-
 	private TileInfo[,] _tileInfo;
+	private static GridGenerator instance = null;
+	public static GridGenerator Instance {
+		get { return instance; }
+	}
+	
+	//Si l'échiquier est en double, détruire les éléments répétitifs
+	void Awake() {
+		if (instance != null && instance != this) {
+			Destroy(this.gameObject);
+			return;
+		} else {
+			instance = this;
+		}
+	}
 
 	// Use this for initialization
 	void Start () {

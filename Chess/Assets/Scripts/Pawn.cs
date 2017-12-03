@@ -15,17 +15,15 @@ public class Pawn : Piece {
 	
 	// Update is called once per frame
 	void Update () {
-		// while(GameManager._Play) {
-			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, Mathf.Infinity, _lm);
-			if (hit.collider != null && hit.collider.tag == "Enemy") {
-				// Debug.Log("hit : "+hit.collider.name);
-				if(_isAttacking==false){
-					_isAttacking=true;
-					_animator.SetTrigger("isAttacking");
-					Invoke("PawnThrow", 0.5f);			
-				}
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, Mathf.Infinity, _lm);
+		if (hit.collider != null && hit.collider.tag == "Enemy") {
+			// Debug.Log("hit : "+hit.collider.name);
+			if(_isAttacking==false){
+				_isAttacking=true;
+				_animator.SetTrigger("isAttacking");
+				Invoke("PawnThrow", 0.5f);
 			}
-		// }
+		}
 	}
 
 	void PawnThrow() {

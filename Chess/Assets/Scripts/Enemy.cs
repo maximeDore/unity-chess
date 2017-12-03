@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
+	[SerializeField]
+	private AudioClip _deadSfx;
+	private Animator _animator;
+	private BoxCollider2D _collider;
+	private AudioSource _sfx;
 	private bool _isAttacking;
 	public bool _IsAttacking {
 		get { return _isAttacking; }
 	}
 	private bool _isDead;
-	private Animator _animator;
+	private int _index;
+	public int _Index {
+		get { return _index; }
+		set { _index = value; }
+	}
 	private int _health;
 	public int _Health {
 		get { return _health; }
 		set { _health = value; }
 	}
-	private EnemyManager _em;
-	private BoxCollider2D _collider;
 
 	// Use this for initialization
 	void Start () {
 		_animator = GetComponent<Animator>();
-		_em = GetComponent<EnemyManager>();
 		_collider = GetComponent<BoxCollider2D>();
+		_sfx = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -48,7 +55,14 @@ public class Enemy : MonoBehaviour {
 	public void Kill(string animation = "isKilled") {
 		_animator.SetTrigger(animation);
 		_isDead = true;
+		if(animation=="isKilled"){
+			_sfx.clip = _deadSfx;
+			_sfx.Play();
+		}
 		_collider.enabled = false;
+		if(_index==2){
+			GameManager.Win();
+		}
 		DestroyEnemy();
 	}
 
@@ -57,6 +71,7 @@ public class Enemy : MonoBehaviour {
 		while (_isAttacking) {
 			yield return new WaitForSeconds(1);
 			if(_isAttacking){
+				_sfx.Play();
 				piece._Health--; 
 			}
 		}
@@ -68,6 +83,8 @@ public class Enemy : MonoBehaviour {
 			_isAttacking = true;
 			_animator.SetBool("isAttacking", true);
 			StartCoroutine(Attack(other.gameObject.GetComponent<Piece>()));
+		} else if(other.gameObject.tag == "Finish"){
+			GameManager.Fail(gameObject);
 		}
 	}
 

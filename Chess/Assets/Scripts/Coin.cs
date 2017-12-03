@@ -17,6 +17,8 @@ public class Coin : MonoBehaviour {
 	void OnMouseEnter() {
 		GameManager._Money += 25;
 		Destroy(gameObject);
-		transform.parent.GetComponent<Bishop>()._CoinExists = false;
+		if(transform.parent.GetComponent<Bishop>()!=null){
+			transform.parent.GetComponent<Bishop>()._CoinExists = false;
+		}
 	}
 }

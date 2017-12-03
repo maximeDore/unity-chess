@@ -52,6 +52,9 @@ TagManager:
   - name: TileItem
     uniqueID: 4050416569
     locked: 0
+  - name: Enemy
+    uniqueID: 3440753181
+    locked: 0
   - name: Pieces
     uniqueID: 64666763
     locked: 0
