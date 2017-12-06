@@ -51,6 +51,8 @@ public class Piece : MonoBehaviour {
 	}
 
 	void OnDestroy() {
-		_Tile._PieceOnTile = false;
+		if(_Tile!=null){
+			_Tile._PieceOnTile = false;
+		}
 	}
 }

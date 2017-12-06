@@ -21,7 +21,7 @@ public class Bishop : Piece {
 		while(GameManager._Play){
 			if(!_CoinExists){
 				yield return new WaitForSeconds(10);
-				Transform coin = Instantiate(moneyRef, transform.position, Quaternion.identity, transform);
+				Instantiate(moneyRef, transform.position, Quaternion.identity, transform);
 				_CoinExists = true;
 				if(transform.childCount>=1){
 					// StartCoroutine(BishopCoinLife(coin));

@@ -16,7 +16,9 @@ public class Coin : MonoBehaviour {
 	private IEnumerator CoinLife() {
 		int coinTimer = 5;
 		yield return new WaitForSeconds(coinTimer);
-		_bishop._CoinExists = false;
+		if(_bishop!=null){
+			_bishop._CoinExists = false;
+		}
 		Destroy(gameObject);
 	}
 

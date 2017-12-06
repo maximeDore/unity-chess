@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour {
 		get { return _status; }
 	}
 	[SerializeField]
+	private AudioClip[] _clap;
+	public AudioClip[] _Clap {
+		get { return _clap; }
+	}
+	[SerializeField]
 	private Text _waveCount;					// Affichage du chiffre correspondant à la vague en cours + /3
 	private static Text _wavePercentageDisplay; // Affichage du pourcentage du niveau de complété
 	private static Animator _finalPopUp;		// Animation du compte à rebours de la vague finale
@@ -113,7 +118,7 @@ public class GameManager : MonoBehaviour {
 	// Quand la partie est gagnée, on change de scène
 	static public void Win(){
 		if(_play){
-			_status = _statusMessage[0];
+			_status = _statusMessage[0];				// Définit le message de rétroaction
 			Debug.Log("=====>Fin de la partie!");
 			_play=false;
 			SceneManager.LoadScene("interlude", LoadSceneMode.Additive);
@@ -123,13 +128,20 @@ public class GameManager : MonoBehaviour {
 	// Quand la partie est perdue, on change de scène
 	static public void Fail(GameObject piece){
 		if(_play){
-			_status = _statusMessage[1];
+			Camera.main.GetComponent<Animator>().SetTrigger("Failure");
+			Transform whiteKing = GameObject.Find("wKing").transform;	// Va chercher la position du roi blanc
+			piece.transform.position = new Vector3(piece.transform.position.x, whiteKing.transform.position.y, piece.transform.position.z);	//Déplace le premier ennemi devant le roi blanc
+			_status = _statusMessage[1];				// Définit le message de rétroaction
 			Debug.Log("=====>Échec de la partie!");
 			_play=false;
-			SceneManager.LoadScene("interlude", LoadSceneMode.Additive);
-		} else {
-			Destroy(piece,1);
+			instance.StartCoroutine(DelayInterlude(6f));
 		}
+		Destroy(piece,10);
+	}
+
+	private static IEnumerator DelayInterlude(float delay) {
+		yield return new WaitForSeconds(delay);
+		SceneManager.LoadScene("interlude", LoadSceneMode.Additive);
 	}
 
 	// Débute le compteur de la vague
@@ -144,5 +156,9 @@ public class GameManager : MonoBehaviour {
 
 	static public void FinalPopUp() {
 		_finalPopUp.SetTrigger("Final");
+	}
+
+	public void Quit() {
+		Application.Quit();
 	}
 }

@@ -11,16 +11,24 @@ public class Interlude : MonoBehaviour {
 	private Text _waveStatus;
 	private GameManager _gm;
 	private Animator _animator;
+	private AudioSource _audio;
 
 	// Use this for initialization
 	void Start () {
 		_gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+		_audio = GetComponent<AudioSource>();
 		if(_waveCount!=null){
 			_waveCount.text = GameManager._Lvl+"/3";
 		}
 		if(_waveStatus!=null){
 			_waveStatus.text = GameManager._Status;
 		}
+		if(GameManager._StatusMessage[0] == GameManager._Status){
+			_audio.clip = _gm._Clap[0];
+		} else {
+			_audio.clip = _gm._Clap[1];
+		}
+		_audio.Play();
 		_animator = GetComponent<Animator>();
 	}
 

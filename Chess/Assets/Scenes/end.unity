@@ -195,7 +195,7 @@ RectTransform:
   m_GameObject: {fileID: 82111411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.028896444, y: 0.028896444, z: 0.028896444}
+  m_LocalScale: {x: 0.028888889, y: 0.028888889, z: 0.028888889}
   m_Children:
   - {fileID: 102381676}
   m_Father: {fileID: 0}
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waveCount: {fileID: 0}
+  _waveStatus: {fileID: 0}
 --- !u!95 &102381678
 Animator:
   serializedVersion: 3
@@ -337,7 +338,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 540665664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.000412, z: 90}
+  m_LocalPosition: {x: 0, y: 3.4300003, z: 90}
   m_LocalScale: {x: 0.022225216, y: 0.022225216, z: 1}
   m_Children: []
   m_Father: {fileID: 102381676}
@@ -345,7 +346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 3.000412}
+  m_AnchoredPosition: {x: 0, y: 3.43}
   m_SizeDelta: {x: 700, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &540665666
@@ -616,7 +617,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.22225285}
-  m_SizeDelta: {x: 700, y: 50}
+  m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1625372426
 MonoBehaviour:
@@ -650,7 +651,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xC7a leur apprendra!"
+  m_Text: "\xC9chec et mat, \n\xC7a leur apprendra!"
 --- !u!222 &1625372427
 CanvasRenderer:
   m_ObjectHideFlags: 0
