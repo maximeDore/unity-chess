@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Objet d'attaque qui lance des projectiles
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,7 +33,7 @@ public class Pawn : Piece {
 	void PawnThrow() {
 		Vector2 posThrow = new Vector2(transform.position.x+1,transform.position.y + 0.6f);
 		Instantiate(ProjectileRef, posThrow, Quaternion.Euler(new Vector3(0, 0, 170)));
-		Invoke("Cooldown",0.55f);
+		Invoke("Cooldown",Random.Range(0.55f,0.65f));
 	}
 
 	void Cooldown(){

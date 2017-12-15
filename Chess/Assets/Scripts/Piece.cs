@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Classe mère des pièces blanches
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

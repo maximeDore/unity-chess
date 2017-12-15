@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+Classe de gestion du jeu
+S'occupe des changements de scène, de la gestion de l'argent et du pourcentage de la vague
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,7 +29,7 @@ public class GameManager : MonoBehaviour {
 		get { return _status; }
 	}
 	[SerializeField]
-	private AudioClip[] _clap;
+	private AudioClip[] _clap;					// Clip audio de rétroaction
 	public AudioClip[] _Clap {
 		get { return _clap; }
 	}
@@ -34,7 +39,7 @@ public class GameManager : MonoBehaviour {
 	private static Animator _finalPopUp;		// Animation du compte à rebours de la vague finale
 	private static Text _moneytor;				// Affichage d'argent sur la scène
 	private int _startingMoney = 50;			// Valeur qui représente la quantité d'argent de départ
-	private static int _money = 50;				// Quantité d'argent possédé par le joueur
+	private static int _money;					// Quantité d'argent possédé par le joueur
 	public static int _Money {
 		get { return _money; }
 		set { _money = value; GameManager.ShowMoney(); }	// Mise à jour de l'affichage de l'argent
@@ -144,11 +149,11 @@ public class GameManager : MonoBehaviour {
 		SceneManager.LoadScene("interlude", LoadSceneMode.Additive);
 	}
 
-	// Débute le compteur de la vague
+	// Débute le compteur de la vague en fonction du niveau
 	public IEnumerator StartWaveCount() {
-		yield return new WaitForSeconds(20f);
+		yield return new WaitForSeconds(25f);
 		while(true){
-			_WavePercentage = _WavePercentage+Time.deltaTime/2*_Lvl;
+			_WavePercentage = _WavePercentage+Time.deltaTime/2.5f*_Lvl;
 			_wavePercentageDisplay.text = Mathf.Floor(_wavePercentage)+"%";
 			yield return null;
 		}

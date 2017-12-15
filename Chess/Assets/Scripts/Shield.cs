@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Objet qui sert de bouclier humain
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

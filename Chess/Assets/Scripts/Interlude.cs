@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Classe de la scène de rétroaction
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 212469955400105114}
   - component: {fileID: 61734155741851286}
   - component: {fileID: 114221800017686328}
-  - component: {fileID: 82361121259334614}
+  - component: {fileID: 82088015353927434}
   m_Layer: 0
   m_Name: wProjectile
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07197541, y: 0.039497077}
+  m_Offset: {x: 0.06263696, y: 0.015651643}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.56920713, y: 0.42547724}
@@ -66,9 +66,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.04, y: 0.53}
+  m_Size: {x: 0.73558295, y: 0.57769084}
   m_EdgeRadius: 0
---- !u!82 &82361121259334614
+--- !u!82 &82088015353927434
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -79,17 +79,17 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e7cd4ce2971ed7f42904bc10400cebd3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
-  m_Pitch: 0
+  m_Volume: 1
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 179
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0.5
+  Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -141,7 +141,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0.586
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

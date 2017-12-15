@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Objet à usage unique qui écrase un ennemi et se supprime
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,11 +17,6 @@ public class Hand : Piece {
 	void Start () {
 		_animator = GetComponent<Animator>();
 		_tm = transform.parent.GetComponent<TileManager>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
 	}
 
 	void Attack() {

@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Objet générateur d'argent qui produit une pièce à toutes les 10 secondes
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Classe qui gère l'utilisation des boutons dans l'interface
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

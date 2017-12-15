@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Objet instancier par des générateur et qui peut être récolté par le joueur pour donner 25$
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

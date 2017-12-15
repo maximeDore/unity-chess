@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Singleton de la musique
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

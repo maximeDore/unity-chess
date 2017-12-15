@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Classe de la scène de crédits
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Classe qui sert de liaison entre les boutons de la scène et le MusicManager
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

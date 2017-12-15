@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Objet de dernier recours
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

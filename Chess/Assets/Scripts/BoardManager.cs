@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Classe qui gère les intéractions avec le plateau (grille)
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,7 +44,7 @@ public class BoardManager : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.GetMouseButtonDown(0)) {
+		if(Input.GetMouseButtonDown(0)) {
 			SelectTile();
 		}
 	}

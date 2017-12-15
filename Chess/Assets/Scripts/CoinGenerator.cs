@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+Générateur d'argent automatique à toutes les 15 secondes sur le plateau
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
