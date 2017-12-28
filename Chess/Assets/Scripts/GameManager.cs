@@ -110,6 +110,12 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public void Instructions() {
+		Animator cam = Camera.main.GetComponent<Animator>();
+		bool instructions = cam.GetBool("instructions");
+		cam.SetBool("instructions", !instructions);
+	}
+
 	// Affichage de l'argent dans l'afficheur
 	static public void ShowMoney() {
 		_moneytor.text = _money+"$";

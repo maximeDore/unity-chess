@@ -20,6 +20,10 @@ public class ButtonManager : MonoBehaviour {
 	private Button _muteBtn;	
 	[SerializeField]
 	private Sprite[] _muteBtnsSprite;
+	[SerializeField]
+	private Button _instructionsBtn;	
+	[SerializeField]
+	private Sprite[] _instructionsBtnSprite;
 
 	// Fonction appelée au clic d'un des boutons de l'interface
 	public void SelectButton(int value) {
@@ -32,6 +36,17 @@ public class ButtonManager : MonoBehaviour {
 			_muteBtn.GetComponent<Image>().sprite = _muteBtnsSprite[0];
 		} else {
 			_muteBtn.GetComponent<Image>().sprite = _muteBtnsSprite[1];
+		}
+	}
+
+	public void InstructionsButton() {
+		Image btnImg = _instructionsBtn.GetComponent<Image>();
+		if(btnImg.sprite == _instructionsBtnSprite[1]){
+			btnImg.sprite = _instructionsBtnSprite[0];
+			_instructionsBtn.transform.localScale += new Vector3(0,0.35f,0);
+		} else {
+			btnImg.sprite = _instructionsBtnSprite[1];
+			_instructionsBtn.transform.localScale -= new Vector3(0,0.35f,0);
 		}
 	}
 
