@@ -32,7 +32,7 @@ public class EnemyManager : MonoBehaviour {
 	private int _phase = 0;				// Section du niveau qui définit la difficulté (0 = 0% / 1 = 1-25% / 2 = 26-50% / 3 = 51-75% / 4 = 76-99% / 5 = 100%)
 	private int _enemyRow;				// Index de la rangée où l'ennemi est instancié à partir de _spawn[]
 	private bool _finalWave;			// Est-ce qu'il s'agit de la vague finale? (Utilisée pour éviter la répétition de la vague pendant la pause du 100%)
-	private static int _enemyCount;		// Compteur qui détermine le nombre d'ennemi(s) sur la scène
+	private static int _enemyCount = 1;		// Compteur qui détermine le nombre d'ennemi(s) sur la scène
 	public static int _EnemyCount {
 		get { return _enemyCount; }
 		set { _enemyCount = value; }
@@ -114,7 +114,6 @@ public class EnemyManager : MonoBehaviour {
 	// Instancier le roi
 	private IEnumerator SpawnKing(){
 		Transform newEnemy = Instantiate(_enemyRef[2],_spawn[_enemyRow].position,Quaternion.identity, transform);
-		_EnemyCount++;
 		Enemy newEnemyScript = newEnemy.GetComponent<Enemy>();
 		newEnemyScript._Health = _enemyHealth[2];
 		newEnemyScript._Index = 2;

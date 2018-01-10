@@ -121,8 +121,6 @@ ccb6188ff1932554c7b7f6951d035d45 Assembly-CSharp.dll:.GameManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Piece
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Projectile
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Rook
-05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
-05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Bishop
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MusicDummy
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -154,7 +152,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Hand
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Bomb
 6a9ac85183b69c496beb2ba243a4a193 Assembly-CSharp.dll:.MusicManager
-41bf0d295228a2a686a1b92b374c7808 Assembly-CSharp.dll:.ButtonManager
+7a2db0acac056f184418e148c85ffce6 Assembly-CSharp.dll:.ButtonManager
 36f5c2daecf959c93279f47263697357 Assembly-CSharp.dll:.Interlude
 0737d334c7b2016b7d0e99540c061e4f Assembly-CSharp.dll:.CoinGenerator
 a077e1a62cadd97cf7000981730dd2cf Assembly-CSharp.dll:.Pawn
