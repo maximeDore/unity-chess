@@ -123,7 +123,7 @@ public class Enemy : MonoBehaviour {
 				_isColliding = true;
 				_animator.SetBool("isColliding", _isColliding);
 			} else {
-				Debug.Log(deltaX);
+				// Debug.Log(deltaX);
 				_isColliding = false;
 				_animator.SetBool("isColliding", _isColliding);
 			}
@@ -167,7 +167,7 @@ public class Enemy : MonoBehaviour {
 	void DestroyEnemy() {
 		StopAllCoroutines();
 		EnemyManager._EnemyCount--;
-		Debug.Log(EnemyManager._EnemyCount);
+		// Debug.Log(EnemyManager._EnemyCount);
 		Destroy(gameObject,1);
 	}
 }

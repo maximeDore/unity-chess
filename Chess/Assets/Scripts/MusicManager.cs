@@ -13,7 +13,7 @@ public class MusicManager : MonoBehaviour {
 	[SerializeField]
 	private AudioClip _normal;
 	private AudioSource _audio;
-	private bool _isFinal;
+	private static bool _isFinal;
 	static protected bool _isMuted;
 	static public bool _IsMuted {
 		get { return _isMuted; }
@@ -23,7 +23,7 @@ public class MusicManager : MonoBehaviour {
 		get { return instance; }
 	}
 	
-	//Si le son est en double, détruire les éléments répétitifs
+	// Si le son est en double, détruire les éléments répétitifs
 	void Awake() {
 		if (instance != null && instance != this) {
 			Destroy(this.gameObject);
@@ -31,7 +31,7 @@ public class MusicManager : MonoBehaviour {
 		} else {
 			instance = this;
 		}
-		DontDestroyOnLoad(this.gameObject);	//Conserve la musique sur la scène en tout temps
+		DontDestroyOnLoad(this.gameObject);	// Conserve la musique sur la scène en tout temps
 	}
 
 	void Start() {
@@ -39,31 +39,35 @@ public class MusicManager : MonoBehaviour {
 	}
 
 	void Update() {
-		if(!_isMuted){
-			if(GameManager._WavePercentage>=99 && !_isFinal){
-				_isFinal=!_isFinal;
-				StartCoroutine(FinalMusic());
-			} else if(GameManager._WavePercentage<99 && _isFinal) {
-				_isFinal=!_isFinal;
-				StartCoroutine(NormalMusic());
+		if(GameManager._WavePercentage >= 99 && !_isFinal && GameManager._Play){
+			_isFinal = true;
+			StartCoroutine(FinalMusic());
+		} else if(GameManager._WavePercentage < 99 && _isFinal) {
+			_isFinal = false;
+            StartCoroutine(NormalMusic());
+		}
+    }
+
+	private IEnumerator FinalMusic() {
+		yield return new WaitForSeconds(10);
+		if(GameManager._Play){
+			_audio.clip = _final;
+			if(!_isMuted) {
+				_audio.Stop();
+				_audio.Play();
 			}
 		}
 	}
 
-	private IEnumerator FinalMusic(){
-		yield return new WaitForSeconds(10);
-		_audio.clip = _final;
-		_audio.Stop();
-		_audio.Play();
-	}
-
-	private IEnumerator NormalMusic(){
+	private IEnumerator NormalMusic() {
 		_audio.clip = _normal;
-		_audio.Play();
+		if(!_isMuted) {
+			_audio.Play();
+		}
 		yield return null;
-	}
+    }
 
-	public void Mute(){
+	public void Mute() {
 		if(!_isMuted){
 			_isMuted=!_isMuted;
 			_audio.Pause();

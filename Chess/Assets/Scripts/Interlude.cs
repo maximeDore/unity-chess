@@ -21,6 +21,7 @@ public class Interlude : MonoBehaviour {
 	void Start () {
 		_gm = GameObject.Find("GameManager").GetComponent<GameManager>();
 		_audio = GetComponent<AudioSource>();
+
 		if(_waveCount!=null){
 			_waveCount.text = GameManager._Lvl+"/3";
 		}
@@ -28,6 +29,7 @@ public class Interlude : MonoBehaviour {
 			_waveStatus.text = GameManager._Status;
 		}
 		if(GameManager._StatusMessage[0] == GameManager._Status){
+			GameManager._Lvl++;
 			_audio.clip = _gm._Clap[0];
 		} else {
 			_audio.clip = _gm._Clap[1];
@@ -54,14 +56,11 @@ public class Interlude : MonoBehaviour {
 	// Action du bouton CONTINUER
 	public void Suivant() {
 		_animator.SetTrigger("isSliding");
-		Invoke("VagueSuivante",1);
+        Invoke("VagueSuivante",1);
 	}
 
 	// Retourne au jeu et change de niveau
 	void VagueSuivante() {
-		if(GameManager._StatusMessage[0] == GameManager._Status){
-			GameManager._Lvl++;
-		}
 		if(GameManager._Lvl<=3){
 			_gm.ChangerScene("main");
 		} else {

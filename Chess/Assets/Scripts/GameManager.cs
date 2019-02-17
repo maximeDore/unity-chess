@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour {
 	private static float _wavePercentage;	// Pourcentage du niveau de complété
 	public static float _WavePercentage {
 		get { return _wavePercentage; }
-		set { _wavePercentage = Mathf.Clamp(value,0,100);ShowPercentage(); }	//Mise à jour de l'affichage du pourcentage
+		set { _wavePercentage = Mathf.Clamp(value,0,100); ShowPercentage(); }	// Mise à jour de l'affichage du pourcentage
 	}
 	private static bool _play;					// Est-ce que la partie est commencée? (true quand le joueur clique sur PRÊT)
 	public static bool _Play {
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour {
 
 	// Démarrage de l'affichage dans l'interface et réinitialisation des variables _money et _wavePercentage
 	void Start () {
-		Debug.Log(_lvl);
+		// Debug.Log(_lvl);
 		if(GameObject.Find("ButtonManager")!=null){
 			GameObject.Find("ButtonManager").GetComponent<ButtonManager>().MuteButton();	// Affiche le statut du bouton mute
 		}
@@ -101,8 +101,10 @@ public class GameManager : MonoBehaviour {
 
 	// Permet de changer de scène vers celle passée en paramètre (string)
 	public void ChangerScene(string scene){
+		_play = false;
+		_wavePercentage = 0;
 		if(scene != "end"){
-			SceneManager.LoadScene(scene);
+            SceneManager.LoadScene(scene);
 		} else {
 			_Lvl=1;
 			SceneManager.UnloadSceneAsync("interlude");
@@ -129,9 +131,10 @@ public class GameManager : MonoBehaviour {
 	// Quand la partie est gagnée, on change de scène
 	static public void Win(){
 		if(_play){
+            _wavePercentage = 0;
 			_status = _statusMessage[0];				// Définit le message de rétroaction
 			Debug.Log("=====>Fin de la partie!");
-			_play=false;
+			_play = false;
 			SceneManager.LoadScene("interlude", LoadSceneMode.Additive);
 		}
 	}
@@ -139,12 +142,12 @@ public class GameManager : MonoBehaviour {
 	// Quand la partie est perdue, on change de scène
 	static public void Fail(GameObject piece){
 		if(_play){
-			Camera.main.GetComponent<Animator>().SetTrigger("Failure");
+            Camera.main.GetComponent<Animator>().SetTrigger("Failure");
 			Transform whiteKing = GameObject.Find("wKing").transform;	// Va chercher la position du roi blanc
 			piece.transform.position = new Vector3(piece.transform.position.x, whiteKing.transform.position.y, piece.transform.position.z);	//Déplace le premier ennemi devant le roi blanc
 			_status = _statusMessage[1];				// Définit le message de rétroaction
 			Debug.Log("=====>Échec de la partie!");
-			_play=false;
+			_play = false;
 			instance.StartCoroutine(DelayInterlude(6f));
 		}
 		Destroy(piece,10);
@@ -152,6 +155,7 @@ public class GameManager : MonoBehaviour {
 
 	private static IEnumerator DelayInterlude(float delay) {
 		yield return new WaitForSeconds(delay);
+		_wavePercentage = 0;
 		SceneManager.LoadScene("interlude", LoadSceneMode.Additive);
 	}
 
